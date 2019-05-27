@@ -7,6 +7,11 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
 
+    linkSelected = 'recipe';
 
+    onNavigate(link: string) {
+        console.log("onNavigate: ", link);
+        this.linkSelected = link;
+    }
 
 }
