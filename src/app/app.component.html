@@ -7,8 +7,13 @@
     </div>
     <div class="row">
         <div class="col-md-12 col-xs-12">
-            <app-shopping-list *ngIf="linkSelected != 'recipe'" ></app-shopping-list>
+            <app-shopping-list *ngIf="linkSelected == 'shopping_list'" ></app-shopping-list>
         </div>
     </div>
+    <div class="row">
+      <div class="col-md-12 col-xs-12">
+          <app-search *ngIf="linkSelected == 'search'" ></app-search>
+      </div>
+  </div>
 </div>
 
