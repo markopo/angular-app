@@ -1,4 +1,4 @@
-import { SearchItem } from '../SearchItem';
+import { SearchItem } from '../search/SearchItem';
 import { Injectable } from '@angular/core';
 import { HttpClient, HttpResponse } from '@angular/common/http';
 

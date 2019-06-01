@@ -33,7 +33,7 @@ export class SearchComponent implements OnInit {
      const result = this.searchService.search(search);
      console.log(result);
 
-      result.subscribe(x =>  this.searchItems = x["results"]),
+      result.subscribe(x =>  this.searchItems = x["results"],
          err => console.error(err),
          () => console.log("completed"));
   }
