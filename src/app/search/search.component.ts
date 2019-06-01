@@ -1,5 +1,8 @@
-import { SearchServiceService } from './../search-service.service';
+import { SearchServiceService } from '../services/search-service.service';
 import { Component, OnInit } from '@angular/core';
+import { Observable, from } from 'rxjs';
+import { SearchItem } from './SearchItem';
+import { FormGroup, FormControl } from '@angular/forms';
 
 @Component({
   selector: 'app-search',
@@ -8,16 +11,31 @@ import { Component, OnInit } from '@angular/core';
 })
 export class SearchComponent implements OnInit {
 
-  constructor(private searchService: SearchServiceService) { }
+  searchItems: SearchItem[];
+
+  form: FormGroup = new FormGroup({
+    search: new FormControl()
+  });
+
+  constructor(private searchService: SearchServiceService) {
+
+
+  }
 
   ngOnInit() {
 
-      const result = this.searchService.search('no doubt');
+  }
 
-      console.log(result);
+  onSubmit() {
+     const search = this.form.value.search;
+     console.log("Search: ", search);
 
-      result.subscribe(x => console.log(x));
+     const result = this.searchService.search(search);
+     console.log(result);
 
+      result.subscribe(x =>  this.searchItems = x["results"]),
+         err => console.error(err),
+         () => console.log("completed"));
   }
 
 }

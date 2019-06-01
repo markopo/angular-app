@@ -1,3 +1,16 @@
-<p>
-  search works!
-</p>
+
+<h2>Search Music on iTunes</h2>
+<form class="form-inline" [formGroup]="form" (ngSubmit)="onSubmit()" >
+  <div class="form-group">
+  <input type="text" class="form-control" formControlName="search" > &nbsp;
+  <input type="submit" class="btn btn-primary" value="Search" >
+</div>
+</form>
+
+<ul class="artist-list" >
+  <li *ngFor="let searchItem of searchItems" >
+      <img class="artist-image" src="{{searchItem.artworkUrl30}}" />
+      <b><a href="{{searchItem.trackViewUrl}}">{{searchItem.trackName}}</a></b>
+        | <i><a href="{{searchItem.artistViewUrl}}">{{searchItem.artistName}}</a></i>
+  </li>
+</ul>

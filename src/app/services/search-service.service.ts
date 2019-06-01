@@ -1,6 +1,6 @@
-import { SearchItem } from './SearchItem';
+import { SearchItem } from '../SearchItem';
 import { Injectable } from '@angular/core';
-import { HttpClient } from '@angular/common/http';
+import { HttpClient, HttpResponse } from '@angular/common/http';
 
 @Injectable({
   providedIn: 'root'
@@ -12,6 +12,6 @@ export class SearchServiceService {
 
   search(term: string) {
     const apiURL = `${this.apiRoot}?term=${term}&media=music&limit=20`;
-    return this.http.jsonp(apiURL, 'callback');
+    return this.http.jsonp<SearchItem[]>(apiURL, 'callback');
   }
 }

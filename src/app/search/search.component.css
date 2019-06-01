@@ -1,0 +1,13 @@
+.artist-image {
+  height:30px;width:30px;display: inline;margin:5px;
+}
+
+.artist-list {
+  list-style: none;
+  margin: 20px 0;
+  padding: 0;
+}
+
+.artist-list li {
+   padding: 5px;
+}
