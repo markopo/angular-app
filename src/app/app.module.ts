@@ -1,3 +1,4 @@
+import { BasicHighlightDirective } from './basic-highlight/basic-highlight.directive';
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
@@ -24,7 +25,8 @@ import { SearchComponent } from './search/search.component';
     RecipeItemComponent,
     ShoppingListComponent,
     ShoppingEditComponent,
-    SearchComponent
+    SearchComponent,
+    BasicHighlightDirective
   ],
   imports: [
     BrowserModule,
