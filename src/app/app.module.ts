@@ -13,6 +13,7 @@ import { RecipeItemComponent } from './recipes/recipe-item/recipe-item.component
 import { ShoppingListComponent } from './shopping-list/shopping-list.component';
 import { ShoppingEditComponent } from './shopping-list/shopping-edit/shopping-edit.component';
 import { SearchComponent } from './search/search.component';
+import { BetterHighlightDirective } from './better-highlight/better-highlight.directive';
 
 
 @NgModule({
@@ -26,7 +27,8 @@ import { SearchComponent } from './search/search.component';
     ShoppingListComponent,
     ShoppingEditComponent,
     SearchComponent,
-    BasicHighlightDirective
+    BasicHighlightDirective,
+    BetterHighlightDirective
   ],
   imports: [
     BrowserModule,
