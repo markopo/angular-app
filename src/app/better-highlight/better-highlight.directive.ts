@@ -1,11 +1,11 @@
-import {OnInit, ElementRef, HostListener} from '@angular/core';
+import {OnInit, ElementRef, HostListener, HostBinding} from '@angular/core';
 import { Directive, Renderer2 } from '@angular/core';
 
 @Directive({
   selector: '[appBetterHighlight]'
 })
 export class BetterHighlightDirective implements OnInit {
-
+   @HostBinding('style.backgroundColor') bgColor: string = 'transparent';
 
 
   constructor(private renderer: Renderer2, private elRef: ElementRef) {
@@ -23,7 +23,8 @@ export class BetterHighlightDirective implements OnInit {
 
 
     private setBgColor(bgColor: string): void {
-        this.renderer.setStyle(this.elRef.nativeElement, 'background-color', bgColor);
+        //this.renderer.setStyle(this.elRef.nativeElement, 'background-color', bgColor);
+        this.bgColor = bgColor;
     }
 
 
