@@ -14,6 +14,7 @@ import { ShoppingListComponent } from './shopping-list/shopping-list.component';
 import { ShoppingEditComponent } from './shopping-list/shopping-edit/shopping-edit.component';
 import { SearchComponent } from './search/search.component';
 import { BetterHighlightDirective } from './better-highlight/better-highlight.directive';
+import { UnlessDirective } from './unless/unless.directive';
 
 
 @NgModule({
@@ -28,7 +29,8 @@ import { BetterHighlightDirective } from './better-highlight/better-highlight.di
     ShoppingEditComponent,
     SearchComponent,
     BasicHighlightDirective,
-    BetterHighlightDirective
+    BetterHighlightDirective,
+    UnlessDirective
   ],
   imports: [
     BrowserModule,
