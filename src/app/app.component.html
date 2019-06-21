@@ -16,15 +16,20 @@
       <div class="col-md-12 col-xs-12">
           <app-search *ngIf="linkSelected == 'search'" ></app-search>
       </div>
-        <div class="row">
-            <div class="col-md-12 col-xs-12">
-                 <ul>
-                     <li *ngFor="let number of numbers" >
-                        <span *appUnless="number % 2 == 0">{{number}}</span>
-                     </li>
-                 </ul>
-            </div>
+    </div>
+    <div class="row">
+        <div class="col-md-12 col-xs-12">
+            <ul *ngIf="linkSelected == 'unless'" >
+                <li *ngFor="let number of numbers" >
+                    <span *appUnless="number % 2 == 0">{{number}}</span>
+                </li>
+            </ul>
         </div>
-  </div>
+    </div>
+    <div class="row">
+        <div class="col-md-12 col-xs-12">
+           <app-fileupload *ngIf="linkSelected == 'file_upload'" ></app-fileupload>
+        </div>
+    </div>
 </div>
 
