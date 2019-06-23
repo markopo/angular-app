@@ -1,3 +1,4 @@
+import { DropDownDirective } from './shared/dropdown.directive';
 import { BasicHighlightDirective } from './basic-highlight/basic-highlight.directive';
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
@@ -32,7 +33,8 @@ import { FileuploadComponent } from './fileupload/fileupload.component';
     BasicHighlightDirective,
     BetterHighlightDirective,
     UnlessDirective,
-    FileuploadComponent
+    FileuploadComponent,
+    DropDownDirective
   ],
   imports: [
     BrowserModule,
