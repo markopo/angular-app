@@ -11,8 +11,12 @@ export class DropDownDirective  implements OnInit {
 
    }
 
-   @HostListener('click') mouseClick() {
-        this.isOpen = !this.isOpen;
+   @HostListener('click', ['$event']) mouseClick(event: Event) {
+        const elem: HTMLElement = event.target as HTMLElement;
+
+        if(elem.tagName === 'A' && elem.className.indexOf('dropdown-toggle') > -1) {
+          this.isOpen = !this.isOpen;
+        }
    }
 
    ngOnInit() {
